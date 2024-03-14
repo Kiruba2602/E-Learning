@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+//app.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CourseCatalog from './components/CourseCatalog';
+import CourseDetails from './components/CourseDetails';
+import VideoPlayer from './components/VideoPlayer';
+import QuizComponent from './components/QuizComponent';
+import UserDashboard from './components/UserDashboard';
+import Home from './components/Home.js';
+import Login from './components/Login.js'
+import DiscussionForum from './components/DiscussionForum.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/courses" element={<CourseCatalog/>} />
+        <Route path="/course/:id" element={<CourseDetails/>} />
+        <Route path="/video/:id" element={<VideoPlayer/>} />
+        <Route path="/quiz/:id" element={<QuizComponent/>} />
+        <Route path="/dashboard" element={<UserDashboard/>} />
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/discussion" element={<DiscussionForum/>} />
+      </Routes>
+    </Router>
   );
 }
 

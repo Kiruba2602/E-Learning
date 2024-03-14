@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript, including variables, data types, functions, and objects.",
+      "instructor": "John Doe",
+      "university": "University of XYZ",
+      "rating": 4.5,
+      "image": "https://example.com/js-intro.jpg",
+      "url": "https://universityofxyz.com/courses/js-intro"
+    },
+    {
+      "id": 2,
+      "title": "Python for Data Science",
+      "description": "Learn how to use Python for data analysis, visualization, and machine learning.",
+      "instructor": "Jane Smith",
+      "university": "University of ABC",
+      "rating": 4.7,
+      "image": "https://example.com/python-data-science.jpg",
+      "url": "https://universityofabc.com/courses/python-data-science"
+    },
+    {
+      "id": 3,
+      "title": "Java Programming",
+      "description": "Learn the fundamentals of Java programming, including object-oriented programming and data structures.",
+      "instructor": "Bob Johnson",
+      "university": "University of DEF",
+      "rating": 4.3,
+      "image": "https://example.com/java-programming.jpg",
+      "url": "https://universityofdef.com/courses/java-programming"
+    },
+    {
+      "id": 4,
+      "title": "C++ Programming",
+      "description": "Learn the basics of C++ programming, including object-oriented programming and data structures.",
+      "instructor": "Alice Davis",
+      "university": "University of GHI",
+      "rating": 4.6,
+      "image": "https://example.com/cplusplus-programming.jpg",
+      "url": "https://universityofghi.com/courses/cplusplus-programming"
+    },
+    {
+      "id": 5,
+      "title": "Introduction to HTML and CSS",
+      "description": "Learn the basics of HTML and CSS, including tags, attributes, and layout.",
+      "instructor": "Charlie Brown",
+      "university": "University of JKL",
+      "rating": 4.8,
+      "image": "https://example.com/html-css-intro.jpg",
+      "url": "https://universityofjkl.com/courses/html-css-intro"
+    },
+    {
+      "id": 6,
+      "title": "React Native for Mobile App Development",
+      "description": "Learn how to build mobile apps using React Native, including components, state management, and navigation.",
+      "instructor": "David Williams",
+      "university": "University of MNO",
+      "rating": 4.4,
+      "image": "https://example.com/react-native.jpg",
+      "url": "https://universityofmno.com/courses/react-native"
+    },
+    {
+      "id": 7,
+      "title": "Introduction to Machine Learning",
+      "description": "Learn the basics of machine learning, including supervised and unsupervised learning, and neural networks.",
+      "instructor": "Eva Johnson",
+      "university": "University of PQR",
+      "rating": 4.9,
+      "image": "https://example.com/machine-learning-intro.jpg",
+      "url": "https://universityofpqr.com/courses/machine-learning-intro"
+    },
+    {
+      "id": 8,
+      "title": "Data Structures and Algorithms",
+      "description": "Learn the fundamentals of data structures and algorithms, including arrays, linked lists, and sorting algorithms.",
+      "instructor": "Frank Miller",
+      "university": "University of STU",
+      "rating": 4.2,
+      "image": "https://example.com/data-structures-algorithms.jpg",
+      "url": "https://universityofstu.com/courses/data-structures-algorithms"
+    },
+    {
+      "id": 9,
+      "title": "Introduction to Web Development",
+      "description": "Learn the basics of web development, including HTML, CSS, JavaScript, and server-side programming.",
+      "instructor": "Grace Lee",
+      "university": "University of VWX",
+      "rating": 4.7,
+      "image": "https://example.com/web-development-intro.jpg",
+      "url": "https://universityofvwx.com/courses/web-development-intro"
+    },
+    {
+      "id": 10,
+      "title": "Full Stack Web Development",
+      "description": "Learn how to build full-stack web applications using modern technologies and frameworks.",
+      "instructor": "Harry White",
+      "university": "University of YZ",
+      "rating": 4.5,
+      "image": "https://example.com/full-stack-web-development.jpg",
+      "url": "https://universityofyz.com/courses/full-stack-web-development"
+    }
+  ]
