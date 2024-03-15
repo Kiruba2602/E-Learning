@@ -1,25 +1,26 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Badge from 'react-bootstrap/Badge';
 
 function Home() {
   return (
     <>
     <Navbar expand='lg' className='bg-body-teritary'>
-    <Container className="mt-5">
+    <Container className="mt-2">
       <Navbar.Brand href="/home"><h1>E-Learning</h1></Navbar.Brand>
-        <Nav className='mx-1 me-auto d-flex flex-row justify-content-end'>
-          <Nav.Link href="/courses">Course Catalog</Nav.Link>
-          <Nav.Link href="/dashboard">User Dashboard</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
+      <Navbar.Toggle />
+        <Nav className='mb-3 d-flex flex-row justify-content-end'>
+          <Nav.Link className='p-2' href="/courses">CourseCatalog</Nav.Link>
+          <Nav.Link className='p-2' href="/dashboard">UserDashboard</Nav.Link>
+          <Nav.Link className='p-2' href="/login">Login</Nav.Link> / <Nav.Link className='p-2' href="/register">Register</Nav.Link>
         </Nav>
     </Container>
     </Navbar>
-    <h3>Welcome to the Learning Platform!</h3>
-    <p>
-      <Button variant="primary">Learn more</Button>
-    </p>
+    <div>
+    <h3>Welcome to the Learning Platform! <Badge bg="secondary">Learn More!</Badge></h3>
+    </div>
     </>
   );
 }

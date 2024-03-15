@@ -7,8 +7,9 @@ import VideoPlayer from './components/VideoPlayer';
 import QuizComponent from './components/QuizComponent';
 import UserDashboard from './components/UserDashboard';
 import Home from './components/Home.js';
-import Login from './components/Login.js'
+import Login from './components/Login.js';
 import DiscussionForum from './components/DiscussionForum.js';
+import Register from './components/Register.js';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path="/video/:id" element={<VideoPlayer/>} />
         <Route path="/quiz/:id" element={<QuizComponent/>} />
         <Route path="/dashboard" element={<UserDashboard/>} />
-        <Route path="/Login" element={<Login/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register />}/>
         <Route path="/discussion" element={<DiscussionForum/>} />
       </Routes>
     </Router>

@@ -10,8 +10,10 @@ function CourseDetails({ match }) {
   const [currentModule, setCurrentModule] = useState(0);
 
   useEffect(() => {
-    axios.get(`assets/courses/${match.params.id}`)
+    console.log('Course ID: ', match.params.id);
+    axios.get(`assets/courses.json/${match.params.id}`)
       .then(response => {
+        console.log('Course details: ', response.data);
         setCourse(response.data);
       })
       .catch(error => {
