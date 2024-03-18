@@ -6,8 +6,8 @@
       "instructor": "John Doe",
       "university": "University of XYZ",
       "rating": 4.5,
-      "image": "https://example.com/js-intro.jpg",
-      "url": "https://universityofxyz.com/courses/js-intro"
+      "image": "https://images.app.goo.gl/JdRKumNztQjDhjc28",
+      "url": "https://youtube.com/embed/W6NZfCO5SIk"
     },
     {
       "id": 2,
@@ -16,8 +16,8 @@
       "instructor": "Jane Smith",
       "university": "University of ABC",
       "rating": 4.7,
-      "image": "https://example.com/python-data-science.jpg",
-      "url": "https://universityofabc.com/courses/python-data-science"
+      "image": "https://images.app.goo.gl/BGZCCKHKsi8kNKNt6",
+      "url": "https://youtube.com/embed/mkv5mxYu0Wk"
     },
     {
       "id": 3,
@@ -26,8 +26,8 @@
       "instructor": "Bob Johnson",
       "university": "University of DEF",
       "rating": 4.3,
-      "image": "https://example.com/java-programming.jpg",
-      "url": "https://universityofdef.com/courses/java-programming"
+      "image": "https://images.app.goo.gl/phGgv8aYF8wfjRpaA",
+      "url": "https://youtube.com/embed/eIrMbAQSU34"
     },
     {
       "id": 4,
@@ -36,8 +36,8 @@
       "instructor": "Alice Davis",
       "university": "University of GHI",
       "rating": 4.6,
-      "image": "https://example.com/cplusplus-programming.jpg",
-      "url": "https://universityofghi.com/courses/cplusplus-programming"
+      "image": "https://images.app.goo.gl/1adakfBSmJRPGNN6A",
+      "url": "https://youtube.com/embed/ZzaPdXTrSb8"
     },
     {
       "id": 5,
@@ -46,8 +46,8 @@
       "instructor": "Charlie Brown",
       "university": "University of JKL",
       "rating": 4.8,
-      "image": "https://example.com/html-css-intro.jpg",
-      "url": "https://universityofjkl.com/courses/html-css-intro"
+      "image": "https://images.app.goo.gl/aTiqFYUwt4vvXCmU6",
+      "url": "https://youtube.com/embed/_GTMOmRrqkU"
     },
     {
       "id": 6,
@@ -56,8 +56,8 @@
       "instructor": "David Williams",
       "university": "University of MNO",
       "rating": 4.4,
-      "image": "https://example.com/react-native.jpg",
-      "url": "https://universityofmno.com/courses/react-native"
+      "image": "https://images.app.goo.gl/MTkHsjj6gt7jjL1SA",
+      "url": "https://youtube.com/embed/Y6aYx_KKM7A"
     },
     {
       "id": 7,
@@ -66,8 +66,8 @@
       "instructor": "Eva Johnson",
       "university": "University of PQR",
       "rating": 4.9,
-      "image": "https://example.com/machine-learning-intro.jpg",
-      "url": "https://universityofpqr.com/courses/machine-learning-intro"
+      "image": "https://images.app.goo.gl/TFsuS5jy6Y4kJzbY8",
+      "url": "https://youtube.com/embed/ukzFI9rgwfU"
     },
     {
       "id": 8,
@@ -76,8 +76,8 @@
       "instructor": "Frank Miller",
       "university": "University of STU",
       "rating": 4.2,
-      "image": "https://example.com/data-structures-algorithms.jpg",
-      "url": "https://universityofstu.com/courses/data-structures-algorithms"
+      "image": "https://images.app.goo.gl/FKU8qR1jjgXse98r9",
+      "url": "https://youtube.com/embed/BBpAmxU_NQo"
     },
     {
       "id": 9,
@@ -86,8 +86,8 @@
       "instructor": "Grace Lee",
       "university": "University of VWX",
       "rating": 4.7,
-      "image": "https://example.com/web-development-intro.jpg",
-      "url": "https://universityofvwx.com/courses/web-development-intro"
+      "image": "https://images.app.goo.gl/FF4TtLbCn8unzoa89",
+      "url": "https://youtube.com/embed/Q33KBiDriJY"
     },
     {
       "id": 10,
@@ -96,7 +96,7 @@
       "instructor": "Harry White",
       "university": "University of YZ",
       "rating": 4.5,
-      "image": "https://example.com/full-stack-web-development.jpg",
-      "url": "https://universityofyz.com/courses/full-stack-web-development"
+      "image": "https://images.app.goo.gl/zt6Lo4n3FNYze84T9",
+      "url": "https://youtube.com/embed/nu_pCVPKzTk"
     }
   ]
