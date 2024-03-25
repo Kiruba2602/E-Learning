@@ -6,7 +6,7 @@
       "instructor": "John Doe",
       "university": "University of XYZ",
       "rating": 4.5,
-      "image": "https://images.app.goo.gl/JdRKumNztQjDhjc28",
+      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220714150931/JavaScript-Introduction.jpg",
       "url": "https://youtube.com/embed/W6NZfCO5SIk"
     },
     {
@@ -16,7 +16,7 @@
       "instructor": "Jane Smith",
       "university": "University of ABC",
       "rating": 4.7,
-      "image": "https://images.app.goo.gl/BGZCCKHKsi8kNKNt6",
+      "image": "https://imarticus.org/blog/wp-content/uploads/2021/12/learn-Python-for-data-science.jpg",
       "url": "https://youtube.com/embed/mkv5mxYu0Wk"
     },
     {
@@ -26,7 +26,7 @@
       "instructor": "Bob Johnson",
       "university": "University of DEF",
       "rating": 4.3,
-      "image": "https://images.app.goo.gl/phGgv8aYF8wfjRpaA",
+      "image": "https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language-768x576.jpg",
       "url": "https://youtube.com/embed/eIrMbAQSU34"
     },
     {
@@ -36,7 +36,7 @@
       "instructor": "Alice Davis",
       "university": "University of GHI",
       "rating": 4.6,
-      "image": "https://images.app.goo.gl/1adakfBSmJRPGNN6A",
+      "image": "https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_CPP.jpg",
       "url": "https://youtube.com/embed/ZzaPdXTrSb8"
     },
     {
@@ -46,7 +46,7 @@
       "instructor": "Charlie Brown",
       "university": "University of JKL",
       "rating": 4.8,
-      "image": "https://images.app.goo.gl/aTiqFYUwt4vvXCmU6",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*TKydYYIz4Byrvh63z5boLg.png",
       "url": "https://youtube.com/embed/_GTMOmRrqkU"
     },
     {
@@ -56,7 +56,7 @@
       "instructor": "David Williams",
       "university": "University of MNO",
       "rating": 4.4,
-      "image": "https://images.app.goo.gl/MTkHsjj6gt7jjL1SA",
+      "image": "https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/reactcourse.png",
       "url": "https://youtube.com/embed/Y6aYx_KKM7A"
     },
     {
@@ -66,7 +66,7 @@
       "instructor": "Eva Johnson",
       "university": "University of PQR",
       "rating": 4.9,
-      "image": "https://images.app.goo.gl/TFsuS5jy6Y4kJzbY8",
+      "image": "https://www.techopedia.com/wp-content/uploads/2023/02/sunlight-lighting-indoors-interior-design-audience-concert-crowd-human-4.jpg",
       "url": "https://youtube.com/embed/ukzFI9rgwfU"
     },
     {
@@ -76,7 +76,7 @@
       "instructor": "Frank Miller",
       "university": "University of STU",
       "rating": 4.2,
-      "image": "https://images.app.goo.gl/FKU8qR1jjgXse98r9",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*4ZcW5tSdizlbtDQyVpRTuA.jpeg",
       "url": "https://youtube.com/embed/BBpAmxU_NQo"
     },
     {
@@ -86,7 +86,7 @@
       "instructor": "Grace Lee",
       "university": "University of VWX",
       "rating": 4.7,
-      "image": "https://images.app.goo.gl/FF4TtLbCn8unzoa89",
+      "image": "https://stiffentechnologies.com/wp-content/uploads/2021/11/Web-Development.jpg",
       "url": "https://youtube.com/embed/Q33KBiDriJY"
     },
     {
@@ -96,7 +96,7 @@
       "instructor": "Harry White",
       "university": "University of YZ",
       "rating": 4.5,
-      "image": "https://images.app.goo.gl/zt6Lo4n3FNYze84T9",
+      "image": "https://www.codingbytes.com/wp-content/uploads/2022/03/full-stack-web-development.jpg",
       "url": "https://youtube.com/embed/nu_pCVPKzTk"
     }
   ]

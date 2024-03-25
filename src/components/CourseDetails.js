@@ -1,48 +1,57 @@
 //coursedetails.js
-import React, { useState, useEffect, useParams } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
-import axios from 'axios';
 import VideoPlayer from './VideoPlayer';
 import QuizComponent from './QuizComponent';
+import { useParams } from 'react-router-dom';
 
-function CourseDetails({ match }) {
+function CourseDetails() {
   const [course, setCourse] = useState(null);
-  const [currentModule, setCurrentModule] = useState(0);
   const { id } = useParams();
+  const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
 
   useEffect(() => {
-    console.log('Course ID: ', id);
-    axios.get(`/assets/courses.json/${id}`)
-      .then(response => {
-        console.log('Course details: ', response.data);
-        setCourse(response.data);
+    fetch(`${process.env.PUBLIC_URL}/assets/courses.json/${id}`) // Assuming courses.json is a local file and contains an array of courses.
+      .then(response => response.json())
+      .then(data => {
+        // Find the course with the matching id.
+        const foundCourse = data.find(course => course.id.toString() === id);
+        if (foundCourse) {
+          setCourse(foundCourse);
+        } else {
+          console.error('Course not found');
+        }
       })
       .catch(error => {
-        console.log('Error fetching course details: ', error);
+        console.log('Error fetching courses: ', error);
       });
   }, [id]);
+
+  const handleNextModule = () => {
+    setCurrentModuleIndex((prevIndex) => (prevIndex + 1) % course.modules.length);
+  };
 
   if (!course) {
     return <div>Loading...</div>;
   }
 
-  const handleNextModule = () => {
-    setCurrentModule(currentModule + 1);
-  };
-
   return (
     <Container className="mt-5">
-    <Card>
-      <Card.Img variant="top" src={course.image} />
-      <Card.Body>
-        <Card.Title>{course.title}</Card.Title>
-        <Card.Text>{course.description}</Card.Text>
-        <Card.VideoPlayer>{currentModule === 0 && <VideoPlayer video={course.modules[currentModule].video} />} </Card.VideoPlayer>
-        <Card.VideoPlayer>{currentModule === 1 && <QuizComponent quiz={course.modules[currentModule].quiz} />} </Card.VideoPlayer>
-        <Button variant="primary" onClick={handleNextModule}>Enroll</Button>
-      </Card.Body>
-    </Card>
-  </Container>
+      <Card>
+        <Card.Img variant="top" src={course.image} />
+        <Card.Body>
+          <Card.Title>{course.title}</Card.Title>
+          <Card.Text>{course.description}</Card.Text>
+          {course.modules.map((module, index) => (
+            <React.Fragment key={index}>
+              {module.video && <VideoPlayer video={module.video} />}
+              {module.quiz && <QuizComponent quiz={module.quiz} />}
+            </React.Fragment>
+          ))}
+          <Button variant="primary" onClick={handleNextModule}>Next Module</Button>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 }
 

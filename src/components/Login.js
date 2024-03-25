@@ -1,58 +1,71 @@
-import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
-import { Link, useNavigate } from "react-router-dom"
+//login.js
+import React, { useState } from 'react'
+import { Navigate, Link } from 'react-router-dom'
+import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../firebase/auth'
+import useAuth from '../contexts/AuthContext'
+import { Card, Form, Button } from 'react-bootstrap'
 
-export default function Login() {
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const { login } = useAuth()
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
-  const history = useNavigate()
+const Login = () => {
+    const { userLoggedIn } = useAuth()
 
-  async function handleSubmit(e) {
-    e.preventDefault()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [isSigningIn, setIsSigningIn] = useState(false)
+    const [errorMessage, setErrorMessage] = useState('')
 
-    try {
-      setError("")
-      setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
-    } catch {
-      setError("Failed to log in")
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        if(!isSigningIn) {
+            setIsSigningIn(true)
+            await doSignInWithEmailAndPassword(email, password)
+            // doSendEmailVerification()
+        }
     }
 
-    setLoading(false)
-  }
+    const onGoogleSignIn = (e) => {
+        e.preventDefault()
+        if (isSigningIn) {
+            setIsSigningIn(true)
+            doSignInWithGoogle().catch(err => {
+                setIsSigningIn(false)
+            })
+        }
+    }
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
-            </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Log In
-            </Button>
-          </Form>
-          <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password?</Link>
-          </div>
-        </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
-      </div>
+      {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
+      <Card className="w-100" style={{ maxWidth: '400px', margin: 'auto', marginTop: '20px' }}>
+            <Card.Body>
+                <h2 className="text-center mb-4">Log In</h2>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group id="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
+
+                    <Form.Group id="password" className="mt-3">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </Form.Group>
+
+                    {errorMessage && <div className="text-red-600 font-bold mt-3">{errorMessage}</div>}
+
+                    <Button disabled={isSigningIn} className="w-100 mt-3" type="submit">
+                        {isSigningIn ? 'Signing In...' : 'Sign In'}
+                    </Button>
+                </Form>
+                <div className="w-100 text-center mt-2">
+                    Need an account? <Link to="/signup">Sign Up</Link>
+                </div>
+                <hr className="my-4" />
+                <Button onClick={onGoogleSignIn} disabled={isSigningIn} className="w-100" variant="light" type="button">
+                    {isSigningIn ? 'Signing In...' : 'Continue with Google'}
+                </Button>
+            </Card.Body>
+        </Card>
     </>
   )
 }
+
+export default Login;
